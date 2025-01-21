@@ -1,0 +1,44 @@
+/*Structure*/
+body{
+    background-color: skyblue;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(images/sky.jpg);
+}
+#content{
+    background-color: white;
+    width: 70%;
+    margin: auto;/*center*/
+    padding: 5px;
+    border: 1px solid darkblue;
+    border-radius: 5px;/*rounding conner*/
+    box-shadow: 10px 10px lightblue;/*shadow*/
+}
+header,footer{
+    background: darkblue;
+    padding: 5px;
+    color: white;
+}
+/*Navigation*/
+#main-nav ul{
+    padding-left: 0;
+}
+#main-nav li{
+    list-style-type: none;/*remove the bullets*/
+    display: inline-block;
+}
+#main-nav a{
+    color: white;
+    text-decoration: none;/*remove underline*/
+    border-bottom: 1px solid transparent;
+}
+#main-nav a:hover{
+    color: crimson;
+    border-bottom: 1px solid white;
+}
+/* Typogrophy(font) */
+header h1{
+    text-align: center;
+}
+footer p{
+    text-align: center;
+}
