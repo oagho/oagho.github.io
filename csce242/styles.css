@@ -1,0 +1,38 @@
+/*Structure*/
+body{
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#information{
+    background-color: whitesmoke;
+    width: 80%;
+    margin: auto;/*center*/
+    padding: 5px;
+    border: 1px solid turquoise;
+    border-radius: 5px;/*rounding conner*/
+    box-shadow: 10px 10px teal;/*shadow*/
+}
+header,footer{
+    background: turquoise;
+    padding: 5px;
+    color: black;
+    border-radius: 5px;/*rounding conner*/
+}
+/*Navigation*/
+#main a{
+    color: black;
+    text-decoration: none;/*remove underline*/
+    border-bottom: 1px solid transparent;
+}
+#main a:hover{
+    background-color: turquoise;
+    border-radius: 5px;/*rounding conner*/
+    border: 1px solid turquoise;
+}
+/* Typogrophy(font) */
+header h1{
+    text-align: center;
+}
+footer p{
+    text-align: center;
+}

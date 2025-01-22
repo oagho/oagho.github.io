@@ -1,0 +1,59 @@
+/*Structure*/
+body{
+    background-color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(images/3d.jpg);
+}
+#content{
+    background-color: whitesmoke;
+    width: 70%;
+    margin: auto;/*center*/
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;/*rounding conner*/
+    box-shadow: 10px 10px black/*shadow*/
+}
+header,footer{
+    background: gray;
+    padding: 5px;
+    color: white;
+}
+.text {
+    text-align: center;
+    padding: 10px;
+  }
+/*Navigation*/
+#navbar ul{
+    padding-left: 0;
+}
+#navbar li{
+    list-style-type: none;/*remove the bullets*/
+    display: inline-block;
+}
+#navbar a{
+    color: white;
+    text-decoration: none;/*remove underline*/
+    border-bottom: 1px solid transparent;
+}
+#navbar a:hover{
+    background-color: black;
+    border-radius: 5px;/*rounding conner*/
+    border: 1px solid black;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    background-color: lightgray;
+}
+img{
+    border: 1px solid black;
+    padding: 5px;
+}
+/* Typogrophy(font) */
+header h1{
+    text-align: center;
+}
+footer p{
+    text-align: center;
+}
