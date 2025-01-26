@@ -18,17 +18,24 @@ header,footer{
     color: black;
     border-radius: 5px;/*rounding conner*/
 }
+
+.form{
+    background-color: turquoise;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 2px;
+    max-width: 70%;
+    
+}
 /*Navigation*/
 #main a{
     color: black;
     text-decoration: none;/*remove underline*/
     border-bottom: 1px solid transparent;
+    padding: 5px;
 }
-#main a:hover{
-    background-color: turquoise;
-    border-radius: 5px;/*rounding conner*/
-    border: 1px solid turquoise;
-}
+
+
 /* Typogrophy(font) */
 header h1{
     text-align: center;
@@ -36,11 +43,18 @@ header h1{
 footer p{
     text-align: center;
 }
+main h2{
+    text-align: center;
+}
+
 
 /* Larger Resolutions */
 @media(min-width:900px){
-    #main-nav ul,
     .flex-container{
         display: flex;
     }
+    .form{
+        flex: 1;
+    }
+
 }
