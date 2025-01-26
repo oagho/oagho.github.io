@@ -36,3 +36,11 @@ header h1{
 footer p{
     text-align: center;
 }
+
+/* Larger Resolutions */
+@media(min-width:900px){
+    #main-nav ul,
+    .flex-container{
+        display: flex;
+    }
+}

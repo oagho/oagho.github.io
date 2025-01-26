@@ -1,0 +1,120 @@
+/*Structure*/
+
+header,footer{
+    background: blanchedalmond;
+    padding: 5px;
+    color: teal;
+    border-radius: 5px;/*rounding conner*/
+}
+
+#content{
+    background-color: blanchedalmond ;
+}
+#main-content{
+    background-color: blanchedalmond;
+    padding: 5px;
+    margin-top: 8px;
+    color: white;
+}
+.flex-container{
+    
+    padding: 20px;
+    margin: auto;/*center*/
+    padding: 5px;
+}
+
+#main-content h1{
+    color: darkgreen;
+    padding: 20px;
+    margin: auto;/*center*/
+    padding: 5px;
+}
+.size{
+    background-color: teal;
+   
+}
+.size1{
+    background-color: lightcoral;
+   
+}
+#range{
+    margin: auto;
+    max-width: 80%;
+}
+.pic{
+    padding: 5px;
+}
+
+.call1of3 , .callof3{
+    background-color: teal
+}
+.call2of3{
+    background-color: lightcoral;
+}
+.call3of3{
+    padding: 5px;
+}
+#lay{
+    margin: auto;
+    max-width: 80%;
+}
+
+/* Navigaiton*/
+#main-nav ul{
+    padding-left: 0;
+}
+#main-nav li  {
+   list-style-type: none;
+   padding: 5px;
+   background-color: lightcoral;
+   border-bottom: 1px solid blanchedalmond;
+}
+#main-nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Topography*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+header h1 {
+    text-align: center;
+    padding: 5px;
+}
+#pk{
+    text-align: center;
+}
+footer p{
+    text-align: center;
+}
+
+/* Larger Resolutions */
+@media(min-width:900px){
+    #main-nav ul,
+    .flex-container{
+        display: flex;
+    }
+    #main-nav li{
+        flex: 1;
+    }
+    .pic{
+        flex: 2;
+    }
+    .tex{
+        flex:8;
+    }
+    
+    .call2of3{
+        flex: 1;
+    }
+    .call3of3{
+        flex: 1;
+    }
+    .call1of3{
+        flex: 3;
+    }
+    .callof3{
+        flex: 2;
+    }
+}
