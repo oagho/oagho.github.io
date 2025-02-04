@@ -27,6 +27,11 @@ header,footer{
     max-width: 70%;
     
 }
+.form img{
+    display: block;
+    margin: auto;
+}
+
 /*Navigation*/
 #main a{
     color: black;
@@ -44,6 +49,11 @@ footer p{
     text-align: center;
 }
 main h2{
+    text-align: center;
+}
+.form h3{
+    display: block;
+    margin: auto;
     text-align: center;
 }
 
