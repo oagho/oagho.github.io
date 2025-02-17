@@ -1,11 +1,11 @@
 :root {
-    --primary-color: #0073e6;
-    --secondary-color: #ff6600;
-    --background-color: #f5f5f5;
-    --text-color: #333;
-    --header-background: #222;
-    --header-text-color: white;
-    --button-hover: #e65c00;
+    --primary-color: #0047AB; /* Deep Blue - Trustworthy & Professional */
+    --secondary-color: #FFD700; /* Gold - Luxury & Confidence */
+    --background-color: #F0F0F0; /* Light Gray - Clean & Modern */
+    --text-color: #333333; /* Dark Gray - Readability */
+    --header-background: #222222; /* Almost Black - Strong & Bold */
+    --header-text-color: #FFFFFF; /* White - High Contrast */
+    --button-hover: #DAA520; /* Dark Gold - Premium Look */
 }
 
 body {
@@ -15,12 +15,15 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
     background-color: var(--header-background);
     color: var(--header-text-color);
-    padding: 2rem 2rem;/* Increased padding to make the header thicker */
+    padding: 2.5rem 2rem; /* Increased padding for a thicker header */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,7 +31,7 @@ header {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
     color: var(--header-text-color);
 }
@@ -54,11 +57,14 @@ nav ul li a {
     color: var(--header-text-color);
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s, background 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
 }
 
 nav ul li a:hover {
     color: var(--secondary-color);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 @media screen and (max-width: 1000px) {
@@ -69,7 +75,7 @@ nav ul li a:hover {
         top: 1rem;
         right: 1rem;
         background: var(--secondary-color);
-        color: white;
+        color: black;
         border: none;
         padding: 0.5rem 1rem;
         border-radius: 5px;
@@ -108,28 +114,31 @@ nav ul li a:hover {
         color: white;
     }
 }
-   
 
 .hero {
     text-align: center;
     padding: 4rem 1rem;
     background-color: var(--primary-color);
     color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
     background-color: var(--secondary-color);
-    color: white;
+    color: black;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 1rem;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 .btn:hover {
     background-color: var(--button-hover);
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .products-grid {
@@ -156,6 +165,9 @@ nav ul li a:hover {
     width: 100%;
     height: auto;
     border-radius: 5px;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
 }
 
 .about, .contact, .checkout, .guide {
@@ -209,13 +221,94 @@ nav ul li a:hover {
 .social-icons img:hover {
     transform: scale(1.1);
 }
+/* contact us css*/
+.container label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
 
+.container input[type="text"],
+.container select,
+.container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.container textarea {
+    height: 200px;
+}
+
+.container input[type="submit"] {
+    background-color: var(--secondary-color);
+    color: black;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.container input[type="submit"]:hover {
+    background-color: var(--button-hover);
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* founders*/
+.founders-section {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.founders {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+    align-items: stretch;
+    
+}
+
+.founder {
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.founder img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.founder h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.founder p {
+    font-size: 1rem;
+    color: var(--text-color);
+    flex-grow: 1;
+}
 footer {
     text-align: center;
     padding: 1rem;
     background-color: var(--header-background);
     color: var(--header-text-color);
-    margin-top: 2rem;
+    margin-top: 2.5rem 2rem;
 }
- 
-

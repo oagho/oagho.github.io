@@ -1,0 +1,35 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Product 1",
+        "image": "https://via.placeholder.com/150",
+        "price": 10.00,
+        "description": "Detailed description for Product 1",
+        "reviews": [
+          { "username": "Alice", "text": "Great product!", "rating": 5 },
+          { "username": "Bob", "text": "Good value for money.", "rating": 4 }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Product 2",
+        "image": "https://via.placeholder.com/150",
+        "price": 12.50,
+        "description": "Detailed description for Product 2",
+        "reviews": [
+          { "username": "Charlie", "text": "Not what I expected.", "rating": 2 }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Product 3",
+        "image": "https://via.placeholder.com/150",
+        "price": 15.00,
+        "description": "Detailed description for Product 3",
+        "reviews": []
+      }
+      
+    ]
+  }
+  

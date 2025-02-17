@@ -1,0 +1,133 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  /* Shop page styles */
+  .search-container {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  #searchBar {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .product-title {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .product-title a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .product-title a:hover {
+    text-decoration: underline;
+  }
+  
+  .price {
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  
+  .add-to-cart {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #218838;
+  }
+  
+  /* Product detail page styles */
+  .product-detail {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+  
+  .product-image {
+    max-width: 300px;
+    width: 100%;
+  }
+  
+  .product-info {
+    flex: 1;
+  }
+  
+  .product-info h1 {
+    margin-top: 0;
+  }
+  
+  /* Reviews section */
+  .reviews {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .review {
+    border-top: 1px solid #eee;
+    padding: 10px 0;
+  }
+  
+  .review:first-child {
+    border-top: none;
+  }
+  
+  form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #0069d9;
+  }
+  
