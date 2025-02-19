@@ -103,8 +103,9 @@ nav ul li a:hover {
         transition: background 0.3s;
     }
 
-    .nav-menu li:hover, .nav-menu li:focus-within {
-        background: var(--button-hover);
+    .nav-menu li:hover, .nav-menu li a :hover {
+        color: var(--button-hover);
+        
     }
 
     .nav-menu li a {
@@ -161,14 +162,6 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
-.product img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    padding: 10px;
-    display: block;
-    margin: 0 auto;
-}
 
 .about, .contact, .checkout, .guide {
     max-width: 800px;
@@ -184,7 +177,7 @@ nav ul li a:hover {
     color: var(--text-color);
 }
 
-.about img, .contact img, .guide img {
+.about img, .contact img, .guide img,.product img {
     width: 100%;
     height: auto;
     border-radius: 5px;

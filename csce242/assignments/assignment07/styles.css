@@ -1,0 +1,48 @@
+
+:root {
+  --blue: #6495ed;
+  --white: #faf0e6;
+}
+
+/* Reset margins and set full height for the body */
+body {
+  margin: 0;
+  background-color: var(--white);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  color: var(--blue);
+}
+
+header p {
+  font-size: large;
+  font-weight: 500;
+}
+
+/* Main content container */
+#content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  background-color: #f9f9f9;
+}
+
+/* Container for the vertical lines */
+.container {
+  display: flex;
+  gap: 60px; /* Space between the two lines */
+}
+
+/* Style for the vertical lines */
+.vertical-line {
+  width: 2px;
+  height: 80vh;
+  background-color: #333;
+}
