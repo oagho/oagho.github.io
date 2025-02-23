@@ -163,8 +163,8 @@ nav ul li a:hover {
 }
 
 
-.about, .contact, .checkout, .guide {
-    max-width: 800px;
+.about, .contact, .checkout, .guide, .featured-products, .shop, .cart {
+    max-width: 80%;
     margin: 2rem auto;
     background: white;
     padding: 2rem;

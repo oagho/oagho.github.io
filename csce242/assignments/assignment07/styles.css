@@ -1,48 +1,67 @@
-
 :root {
-  --blue: #6495ed;
-  --white: #faf0e6;
+  --navy: #001f3f;    /* Dark navy for text */
+  --teal: #008080;     /* Teal for borders */
+  --orange: #FFA500;   /* Orange for buttons */
+  --cream: #fffdd0;    /* Cream for hover text */
 }
 
-/* Reset margins and set full height for the body */
-body {
-  margin: 0;
-  background-color: var(--white);
+.border-inline {
+  border-inline: solid var(--teal) 1rem;
 }
 
-header {
+.hidden {
+  display: none;
+}
+header,footer{
+  background: var(--teal);
+  padding: 5px;
+  color: var(--cream);
+  }
+main {
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  color: var(--navy);
+  margin-block-end: 4rem;
+}
+
+h1 {
   text-align: center;
-  margin-bottom: 2rem;
 }
 
-header h1 {
-  color: var(--blue);
+button {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  border: 4px solid var(--orange);
+  transition: all 0.4s;
 }
 
-header p {
-  font-size: large;
-  font-weight: 500;
+button:hover:not(:disabled) {
+  background-color: var(--orange);
+  color: var(--cream);
 }
 
-/* Main content container */
-#content {
-  height: 100vh;
-  display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-  background-color: #f9f9f9;
+button:disabled:hover {
+  cursor: not-allowed;
 }
 
-/* Container for the vertical lines */
-.container {
-  display: flex;
-  gap: 60px; /* Space between the two lines */
-}
+#stairs {
+  width: 25ch;
+  padding-block: 1rem;
+  display: grid;
+  gap: 2rem;
+  position: relative;
 
-/* Style for the vertical lines */
-.vertical-line {
-  width: 2px;
-  height: 80vh;
-  background-color: #333;
+  & hr {
+      border: solid var(--teal) 4px;
+      width: 100%;
+  }
+
+  & img {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      translate: -50%;
+  }
 }

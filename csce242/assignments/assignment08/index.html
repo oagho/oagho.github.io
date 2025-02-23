@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Popup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        header,footer{
+        background: darkblue;
+        padding: 5px;
+        color: white;
+        }
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .title {
+            cursor: pointer;
+            margin: 10px;
+            padding: 10px;
+            background: lightgray;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+        }
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            display: none;
+        }
+        .hidden {
+            display: none;
+        }
+        #close {
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 18px;
+        }
+        .popup img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Main title</h1>
+    </header>
+    <div class="header">Image Popup Gallery</div>
+    <div class="container" id="titles-container"></div>
+
+    <div class="popup hidden" id="popup">
+        <span id="close">&#10006;</span>
+        <h2 id="popup-title"></h2>
+        <img id="popup-img" src="" alt="">
+    </div>
+
+    <section>
+        Image by <a href="https://www.freepik.com/free-vector/hand-drawn-stickman-collection_20832062.htm#query=stick%20figure%20run&position=46&from_view=search&track=ais&uuid=22e87991-ee06-4dc2-8ea3-464d535e1a63">Freepik</a>
+    </section>
+
+    <script>
+        const images = {
+            "Happy Birthday": "images/birthday.jpg",
+            "Crazy clown": "images/clown.jpg",
+            "it's Raining": "images/rain.jpg",
+            "Quiet Time": "images/read.jpg",
+            "Working Hard": "images/shovel.jpg",
+            "Work From Home": "images/work.jpg"
+        };
+
+        const container = document.getElementById("titles-container");
+        const popup = document.getElementById("popup");
+        const popupTitle = document.getElementById("popup-title");
+        const popupImg = document.getElementById("popup-img");
+        const closeBtn = document.getElementById("close");
+
+        Object.keys(images).forEach(title => {
+            let div = document.createElement("div");
+            div.classList.add("title");
+            div.textContent = title;
+            div.addEventListener("click", () => {
+                popupTitle.textContent = title;
+                popupImg.src = images[title];
+                popup.classList.remove("hidden");
+            });
+            container.appendChild(div);
+        });
+
+        closeBtn.addEventListener("click", () => {
+            popup.classList.add("hidden");
+        });
+    </script>
+</body>
+</html>
