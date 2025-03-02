@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Assignment 9 - Classes</h1>
+    </header>
+
+    <main>
+        <div class="pizza-menu">
+            <div class="pizza-item" 
+                 data-name="Pepperoni Pizza" 
+                 data-ingredients="Pepperoni, oregano" 
+                 data-sauce="Tomato sauce" 
+                 data-cheese="Mozzarella" 
+                 data-price="$17.99" 
+                 data-image="images/pepperoni_pizza.png">
+                <img src="images/pepperoni_pizza.png" alt="Pepperoni Pizza">
+                <h3>Pepperoni Pizza</h3>
+            </div>
+
+            <div class="pizza-item" 
+                 data-name="Margarita Pizza" 
+                 data-ingredients="Tomatoes, basil, olive oil" 
+                 data-sauce="Tomato sauce" 
+                 data-cheese="Fresh Mozzarella" 
+                 data-price="$15.99" 
+                 data-image="images/margarita_pizza.png">
+                <img src="images/margarita_pizza.png" alt="Margarita Pizza">
+                <h3>Margarita Pizza</h3>
+            </div>
+
+            <div class="pizza-item" 
+                 data-name="BBQ Chicken Pizza" 
+                 data-ingredients="Barbecue sauce, grilled chicken, red onion" 
+                 data-sauce="Tomato sauce" 
+                 data-cheese="Fresh Mozzarella" 
+                 data-price="$19.99" 
+                 data-image="images/bbq_chicken_pizza.png">
+                <img src="images/bbq_chicken_pizza.png" alt="BBQ Chicken Pizza">
+                <h3>BBQ Chicken Pizza</h3>
+            </div>
+
+            <div class="pizza-item" 
+                 data-name="Meat Lover's Pizza" 
+                 data-ingredients="Pepperoni, sausage, bacon, ham, beef" 
+                 data-sauce="Tomato sauce" 
+                 data-cheese="Fresh Mozzarella" 
+                 data-price="$20.99" 
+                 data-image="images/meat_lovers_pizza.png">
+                <img src="images/meat_lovers_pizza.png" alt="Meat Lover's Pizza">
+                <h3>Meat Lover's Pizza</h3>
+            </div>
+
+            <div class="pizza-item" 
+                 data-name="Hawaiian Pizza" 
+                 data-ingredients="Pineapple, tomatoes" 
+                 data-sauce="Tomato sauce" 
+                 data-cheese="Fresh Mozzarella" 
+                 data-price="$18.99" 
+                 data-image="images/hawaiian_pizza.png">
+                <img src="images/hawaiian_pizza.png" alt="Hawaiian Pizza">
+                <h3>Hawaiian Pizza</h3>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pizza Place. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal for displaying pizza details -->
+    <div id="pizzaModal" class="modal">
+        <div class="modal-container">
+            <span id="closeModal" class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
