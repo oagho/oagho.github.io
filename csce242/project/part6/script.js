@@ -17,38 +17,65 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Fetch and display products dynamically
-document.addEventListener("DOMContentLoaded", function () {
-    fetch("data/products.json") // Adjust the path if necessary
-        .then(response => response.json())
-        .then(data => {
-            displayProducts(data.products);
-        })
-        .catch(error => console.error("Error loading products:", error));
-});
+// Fetch and display products dynamically  https://oagho.github.io/csce242/project/part6/data/products.json
+const getProducts = async () => {
+    const url = "https://oagho.github.io/csce242/project/part6/data/products.json"; // Ensure the correct path
 
-//display product in shop.html
-function displayProducts(products) {
+    try {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log("✅ Products fetched successfully:", data);
+
+        if (!data || !Array.isArray(data.products)) {
+            throw new Error("❌ Invalid JSON format: 'products' array not found.");
+        }
+
+        return data.products; // Return the array of products
+    } catch (error) {
+        console.error("❌ Error fetching products:", error);
+    }
+};
+
+const showProducts = async () => {
+    const products = await getProducts();
+
+    if (!products || !Array.isArray(products)) {
+        console.error("❌ No products found or invalid data format.");
+        return;
+    }
+
     const productsGrid = document.querySelector(".products-grid");
 
-    // Clear existing products in case of reload
-    productsGrid.innerHTML = "";
+    if (!productsGrid) {
+        console.error("❌ Error: .products-grid not found in shop.html");
+        return;
+    }
+
+    productsGrid.innerHTML = ""; // Clear existing products
 
     products.forEach(product => {
-        const productHTML = `
-            <div class="product">
-                <img src="${product.image}" alt="${product.name}">
-                <h3>${product.name}</h3>
-                <p>${product.description}</p>
-                <p><strong>Price:</strong> $${product.price.toFixed(2)}</p>
-                <p><strong>Rating:</strong> ⭐${product.rating} (${product.reviews} Reviews)</p>
-                <button onclick="addToCart(${product.id})" class="btn">Add to Cart</button>
-            </div>
-        `;
-        productsGrid.innerHTML += productHTML;
-    });
-}
+        const productDiv = document.createElement("div");
+        productDiv.classList.add("product");
 
-function addToCart(productId) {
-    alert("Product " + productId + " added to cart!");
-}
+        productDiv.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <p>$${product.price.toFixed(2)}</p>
+            <a href="cart.html" class="btn">Add to cart</a>
+        `;
+
+        productsGrid.appendChild(productDiv);
+    });
+
+    console.log("✅ Products displayed successfully in shop layout!");
+};
+
+// Run showProducts on Page Load
+showProducts();
+
+
