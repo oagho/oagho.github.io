@@ -78,4 +78,151 @@ const showProducts = async () => {
 // Run showProducts on Page Load
 showProducts();
 
+// random 4 product from json in index.html(home.html)
 
+const showRandomProducts = async () => {
+    const products = await getProducts();
+
+    if (!products || products.length < 4) {
+        console.error("❌ Not enough products found.");
+        return;
+    }
+
+    const featuredSection = document.getElementById("featured-products");
+
+    if (!featuredSection) {
+        console.error("❌ Error: #featured-products not found in home.html");
+        return;
+    }
+
+    featuredSection.innerHTML = ""; // Clear existing products
+
+    // Shuffle array and select 4 random products
+    const shuffledProducts = products.sort(() => 0.5 - Math.random()).slice(0, 4);
+
+    shuffledProducts.forEach(product => {
+        const productDiv = document.createElement("div");
+        productDiv.classList.add("product");
+
+        productDiv.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <p>$${product.price.toFixed(2)}</p>
+            <a href="shop.html" class="btn">View More</a>
+        `;
+
+        featuredSection.appendChild(productDiv);
+    });
+
+    console.log("✅ Featured products displayed successfully!");
+};
+
+// Run function to display random products on home page
+showRandomProducts();
+    // Add to Cart Function
+const addToCart = async (productId) => {
+    const products = await getProducts();
+    const product = products.find(p => p.id === productId);
+
+    if (!product) {
+        console.error(`❌ Product ID ${productId} not found.`);
+        return;
+    }
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existingItem = cart.find(item => item.id === productId);
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({ ...product, quantity: 1 });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(`${product.name} added to cart!`);
+};
+
+// Load Cart Items in cart.html
+const loadCart = () => {
+    const cartItemsContainer = document.querySelector(".cart-items");
+    const cartTotal = document.getElementById("cart-total");
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (!cartItemsContainer || !cartTotal) {
+        console.error("❌ Cart elements not found in cart.html.");
+        return;
+    }
+
+    cartItemsContainer.innerHTML = ""; // Clear current cart display
+    let total = 0;
+
+    if (cart.length === 0) {
+        cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+        cartTotal.innerText = "$0.00";
+        return;
+    }
+
+    cart.forEach((item, index) => {
+        const cartItemDiv = document.createElement("div");
+        cartItemDiv.classList.add("cart-item");
+
+        cartItemDiv.innerHTML = `
+            <img src="${item.image}" alt="${item.name}">
+            <h3>${item.name}</h3>
+            <p>$${item.price.toFixed(2)}</p>
+            <input type="number" value="${item.quantity}" min="1" data-index="${index}" class="cart-quantity">
+            <button class="remove" data-index="${index}">Remove</button>
+        `;
+
+        total += item.price * item.quantity;
+        cartItemsContainer.appendChild(cartItemDiv);
+    });
+
+    cartTotal.innerText = `$${total.toFixed(2)}`;
+
+    // Attach event listeners for quantity changes and remove buttons
+    document.querySelectorAll(".cart-quantity").forEach(input => {
+        input.addEventListener("change", updateQuantity);
+    });
+
+    document.querySelectorAll(".remove").forEach(button => {
+        button.addEventListener("click", removeItem);
+    });
+};
+
+// Update Quantity in Cart
+const updateQuantity = (event) => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const index = event.target.getAttribute("data-index");
+    const newQuantity = parseInt(event.target.value);
+
+    if (newQuantity > 0) {
+        cart[index].quantity = newQuantity;
+    } else {
+        cart.splice(index, 1); // Remove if quantity is zero
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart(); // Reload cart after updating
+};
+
+// Remove Item from Cart
+const removeItem = (event) => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const index = event.target.getAttribute("data-index");
+
+    cart.splice(index, 1); // Remove selected item
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart(); // Reload cart after removing
+};
+
+// Clear Entire Cart
+const clearCart = () => {
+    localStorage.removeItem("cart");
+    loadCart();
+};
+
+// Ensure cart loads when viewing cart.html
+if (window.location.pathname.includes("cart.html")) {
+    loadCart();
+}
