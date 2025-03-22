@@ -1,78 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gear Hive - Contact Us</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <div class="logo">Gear Hive</div>
-        <button class="nav-toggle">☰</button>
-        <nav  class="nav-menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="checkout.html">Checkout</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="guide.html">User Guide</a></li>
-            </ul>
-        </nav>
+      <div class="logo">Gear Hive</div>
+      <button class="nav-toggle">☰</button>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="guide.html">User Guide</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <section class="contact">
-            <h1>Contact Us</h1>
-            <p>Have any questions? Reach out to us and we will get back to you as soon as possible.</p>
-            
-            <div class="contact-info">
-                <p><strong>Email:</strong> support@gearhive.com</p>
-                <p><strong>Phone:</strong> +1 (800) 123-4567</p>
-                <p><strong>Address:</strong> 123 Gear Street, Tool City, TX 75001</p>
-            </div>
-            
-           
-            <div class="container">
-                <form action="#" method="post">
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+      <section class="contact">
+        <h1>Contact Us</h1>
+        <p>
+          Have any questions? Reach out to us and we will get back to you as
+          soon as possible.
+        </p>
 
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+        <div class="contact-info">
+          <p><strong>Email:</strong> support@gearhive.com</p>
+          <p><strong>Phone:</strong> +1 (800) 123-4567</p>
+          <p><strong>Address:</strong> 123 Gear Street, Tool City, TX 75001</p>
+        </div>
 
-                    <label for="country">Country</label>
-                    <select id="country" name="country" required>
-                        <option value="">Select your country</option>
-                        <option value="australia">Australia</option>
-                        <option value="canada">Canada</option>
-                        <option value="usa">USA</option>
-                    </select>
+        <div class="container">
+          <form method="POST" id="form">
+            <input
+              type="hidden"
+              name="access_key"
+              value="5f333a49-9f02-407a-a9c7-4712809fb5c0"
+            />
 
-                    <label for="subject">Subject</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+            <label for="fname">First Name</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Your name.."
+              required
+            />
 
-                    <input type="submit" value="Submit" class="btn">
-                </form>
-            </div>
-        </section>
-        
-        <section class="social-media">
-            <h2>Follow Us</h2>
-            <p>Stay connected with us on social media for updates and promotions.</p>
-            <div class="social-icons">
-                <a href="#" class="social-icon"><img src="images/facebook.png" alt="Facebook"></a>
-                <a href="#" class="social-icon"><img src="images/twitter.png" alt="Twitter"></a>
-                <a href="#" class="social-icon"><img src="images/instagram.png" alt="Instagram"></a>
-                <a href="#" class="social-icon"><img src="images/linkedin.png" alt="LinkedIn"></a>
-            </div>
-        </section>
+            <label for="lname">Last Name</label>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Your last name.."
+              required
+            />
+
+            <label for="country">Country</label>
+            <select id="country" name="country" required>
+              <option value="">Select your country</option>
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea
+              id="subject"
+              name="subject"
+              placeholder="Write something.."
+              style="height: 200px"
+              required
+            ></textarea>
+
+            <input type="submit" value="Submit" class="btn" />
+          </form>
+        </div>
+      </section>
+
+      <section class="social-media">
+        <h2>Follow Us</h2>
+        <p>
+          Stay connected with us on social media for updates and promotions.
+        </p>
+        <div class="social-icons">
+          <a href="#" class="social-icon"
+            ><img src="images/facebook.png" alt="Facebook"
+          /></a>
+          <a href="#" class="social-icon"
+            ><img src="images/twitter.png" alt="Twitter"
+          /></a>
+          <a href="#" class="social-icon"
+            ><img src="images/instagram.png" alt="Instagram"
+          /></a>
+          <a href="#" class="social-icon"
+            ><img src="images/linkedin.png" alt="LinkedIn"
+          /></a>
+        </div>
+      </section>
     </main>
-    
+
     <footer>
-        <p>&copy; 2025 Gear Hive. All rights reserved.</p>
+      <p>&copy; 2025 Gear Hive. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
-</body>
+
+    <script src="contact.js"></script>
+  </body>
 </html>

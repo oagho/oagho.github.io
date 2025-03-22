@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gear Hive - Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Gear Hive</div>
+        <button class="nav-toggle">☰</button>
+        <nav  class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="guide.html">User Guide</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="checkout">
+            <h1>Checkout</h1>
+            <form action="#" method="post">
+                <h2>Billing Details</h2>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+                
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+                
+                <label for="zip">Zip Code:</label>
+                <input type="text" id="zip" name="zip" required>
+                
+                <h2>Payment Details</h2>
+                <label for="card">Card Number:</label>
+                <input type="text" id="card" name="card" required>
+                
+                <label for="expiry">Expiry Date:</label>
+                <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+                
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+                
+                <button type="submit" class="btn">Place Order</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Gear Hive. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
