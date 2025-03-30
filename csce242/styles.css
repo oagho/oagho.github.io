@@ -1,70 +1,67 @@
 /*Structure*/
-body{
-    background-color: whitesmoke;
-    font-family: Arial, Helvetica, sans-serif;
+body {
+  background-color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
 }
-#information{
-    background-color: whitesmoke;
-    width: 80%;
-    margin: auto;/*center*/
-    padding: 5px;
-    border: 1px solid turquoise;
-    border-radius: 5px;/*rounding conner*/
-    box-shadow: 10px 10px teal;/*shadow*/
+#information {
+  background-color: whitesmoke;
+  width: 80%;
+  margin: auto; /*center*/
+  padding: 5px;
+  border: 1px solid turquoise;
+  border-radius: 5px; /*rounding conner*/
+  box-shadow: 10px 10px teal; /*shadow*/
 }
-header,footer{
-    background: turquoise;
-    padding: 5px;
-    color: black;
-    border-radius: 5px;/*rounding conner*/
+header,
+footer {
+  background: turquoise;
+  padding: 5px;
+  color: black;
+  border-radius: 5px; /*rounding conner*/
 }
 
-.form{
-    background-color: turquoise;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 2px;
-    max-width: 70%;
-    
+.form {
+  background-color: turquoise;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 2px;
+  max-width: 70%;
 }
-.form img{
-    display: block;
-    margin: auto;
+.form img {
+  display: block;
+  margin: auto;
 }
 
 /*Navigation*/
-#main a{
-    color: black;
-    text-decoration: none;/*remove underline*/
-    border-bottom: 1px solid transparent;
-    padding: 5px;
+#main a {
+  color: black;
+  text-decoration: none; /*remove underline*/
+  border-bottom: 1px solid transparent;
+  padding: 5px;
 }
-
 
 /* Typogrophy(font) */
-header h1{
-    text-align: center;
+header h1 {
+  text-align: center;
 }
-footer p{
-    text-align: center;
+footer p {
+  text-align: center;
 }
-main h2{
-    text-align: center;
+main h2 {
+  text-align: center;
 }
-.form h3{
-    display: block;
-    margin: auto;
-    text-align: center;
+.form h3 {
+  display: block;
+  margin: auto;
+  text-align: center;
 }
-
 
 /* Larger Resolutions */
-@media(min-width:900px){
-    .flex-container{
-        display: flex;
-    }
-    .form{
-        flex: 1;
-    }
-
+@media (min-width: 1000px) {
+  .flex-container {
+    display: flex;
+  }
+  .form {
+    flex: 1;
+  }
 }
