@@ -73,7 +73,6 @@ img {
 .nav-toggle {
   display: none;
   font-size: 2rem;
-  background: none;
   border: none;
   color: var(--header-text-color);
   cursor: pointer;
